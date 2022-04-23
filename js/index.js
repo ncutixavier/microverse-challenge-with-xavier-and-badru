@@ -55,3 +55,15 @@ const history = [
     details: "Retires from the National Labor Relations Board",
   },
 ];
+
+const listContainer = document.querySelector(".tribute-list");
+
+history.forEach((item) => {
+  let template = `
+    <li>
+      <strong>${item.year}</strong> -
+      <span>${item.details}</span>
+    </li>
+  `;
+  listContainer.innerHTML += template;
+});
